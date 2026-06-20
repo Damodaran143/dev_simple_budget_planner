@@ -9,6 +9,7 @@
 
 .shell__sidebar {
   flex-shrink: 0;
+  max-width: 30;
 }
 
 .shell__main {
