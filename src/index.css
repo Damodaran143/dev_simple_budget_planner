@@ -1,0 +1,75 @@
+:root {
+  /* Color tokens — bank-passbook cover & ledger palette */
+  --cover-navy: #18243f;
+  --cover-navy-deep: #0e1729;
+  --paper: #f6f2e7;
+  --paper-line: #e3dac4;
+  --gold: #b8923f;
+  --gold-bright: #d8b46a;
+  --ink: #23283a;
+  --ink-soft: #646b80;
+  --credit: #2f6f4f;
+  --credit-soft: #e3efe6;
+  --debit: #a23e2f;
+  --debit-soft: #f4e4df;
+
+  /* Type tokens */
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--cover-navy-deep);
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(216, 180, 106, 0.08), transparent 45%),
+    radial-gradient(circle at 85% 100%, rgba(216, 180, 106, 0.06), transparent 50%);
+  color: var(--ink);
+  font-family: var(--font-body);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, select {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--cover-navy-deep);
+}
+
+/* Visible keyboard focus, kept consistent across interactive elements */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
