@@ -7,7 +7,7 @@ function downloadCSV(entries) {
   const header = ['Date', 'Type', 'Category', 'Particulars', 'Amount']
   const rows = entries.map((e) => [
     e.date,
-    e.type === 'income' ? 'Deposit' : 'Withdrawa',
+    e.type === 'income' ? 'Deposit' : 'Withdrawal',
     e.category,
     `"${e.description.replace(/"/g, '""')}"`,
     e.amount,
